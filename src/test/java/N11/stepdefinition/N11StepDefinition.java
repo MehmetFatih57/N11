@@ -77,13 +77,10 @@ public class N11StepDefinition {
         js.executeScript("arguments[0].click();" , n11.uyariMetni);
         ReusableMethods.bekle(3);
         assert n11.eklenenUrun.isDisplayed();
-        //js.executeScript("arguments[0].scrollIntoView();" , n11.eklenenUrun);
         ReusableMethods.bekle(3);
     }
     @Then("Ürün sayfasındaki fiyat ile sepette yer alan ürün fiyatının doğruluğu karşılaştırılır.")
     public void ürün_sayfasındaki_fiyat_ile_sepette_yer_alan_ürün_fiyatının_doğruluğu_karşılaştırılır() {
-//        assert n11.urunTutari.isDisplayed();
-//        ReusableMethods.bekle(3);
         String urunFiyati = "20.999,00 TL";
         Assert.assertEquals(n11.urunTutari.getText() , urunFiyati);
         ReusableMethods.bekle(3);
